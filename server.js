@@ -25,15 +25,11 @@ server.use(cors()); // make it open to any client
 // 
 
 class Weather {
- // that properties of `date` and `description`.
-    
-//  this.date = 
-//  this.description =
- 
-    constructor(){
-   
+   constructor (description,date){
+        this.description =description;
+        this.date = date;
+}
 
-    }
 }
 
 
@@ -42,21 +38,23 @@ server.get('/test',(request,response)=>{
     response.status(200).send('my server is working')
 })
 
-//localhost:3010/getweatherInfo?lat=<>&&lon=<>&&searchQuery=<amman>
+//localhost:3010/getweatherInfo?searchQuery=<amman>
 server.get('/getweatherInfo',(req,res)=>{
-    console.log(req.query);
+    // console.log(req.query);
     let selectedCity = weatherData.find (city =>{
         if(city.city_name == req.query.searchQuery) {
             return city
         }
     })
-
-     selectedCity.data.map(newData=> {
+       let des = selectedCity.data.map(newData=> {
+        
         return new Weather (newData.weather.description, newData.valid_date)
     })
-    console.log(selectedCity);
+    
+    
 
-    res.status(200).send(selectedCity);
+    res.status(200).send(des);
+    console.log(des);
 })
 
 // handle any route
