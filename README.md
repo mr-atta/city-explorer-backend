@@ -57,11 +57,22 @@ Actual time needed to complete: _____
 <!--
 Name of feature: 1.Weather (live)
 
-Estimate of time needed to complete: __40 min___
+Estimate of time needed to complete: __60 min___
 
 Start time: __2:20___
+
+Finish time: __4:40___
+
+Actual time needed to complete: __110 min___
+
+Name of feature: 2. Movies and 3 .
+
+Estimate of time needed to complete: __120 min___
+
+Start time: __4:50___
 
 Finish time: _____
 
 Actual time needed to complete: _____
+
  -->
