@@ -80,21 +80,21 @@ Actual time needed to complete: _____
  <!--
 Name of feature: 1. Refactor: Modularize the back-end codebase.
 
-Estimate of time needed to complete: _ min___
+Estimate of time needed to complete: _40 min___
 
 Start time: __2:03___
 
 Finish time: __3:10___
 
-Actual time needed to complete: __ min___
+Actual time needed to complete: __60 min___
 
-Name of feature: 
+Name of feature: 2
 
-Estimate of time needed to complete: __ min___
+Estimate of time needed to complete: __ 30 min___
 
-Start time: ____
+Start time: _3:30___
 
-Finish time: ____
+Finish time: __4:10__
 
-Actual time needed to complete: _____
+Actual time needed to complete: __40 min___
  -->
