@@ -44,28 +44,6 @@ server.get("/test", (request, response) => {
   response.status(200).send("my server is working");
 });
 
-//localhost:3010/getweatherInfo?searchQuery=<amman>
-//      let url2 = `http://localhost:3010/getweatherInfo?searchQuery=${this.state.nameFromInput}&&let=${this.state.dataForCity.lat}&&lon=${this.state.dataForCity.lon}`;
-
-//
-
-// server.get("/getweatherInfo", (req, res) => {
-//   // console.log(req.query);
-//   let selectedCity = weatherData.find((city) => {
-//     if (city.city_name == req.query.searchQuery) {
-//       return city;
-//     }
-//   });
-//   let des = selectedCity.data.map((newData) => {
-//     return new Weather(newData.weather.description, newData.valid_date);
-//   });
-
-//   res.status(200).send(des);
-//   console.log(des);
-// });
-
-//
-
 // weather
 //localhost:3010/getweatherInfo?searchQuery=<amman>&&let=<>&&lon=<>
 server.get("/getweatherInfo", getHandelWeather);
