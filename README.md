@@ -71,8 +71,30 @@ Estimate of time needed to complete: __120 min___
 
 Start time: __4:50___
 
-Finish time: _____
+Finish time: __10:40___
 
 Actual time needed to complete: _____
+ -->
+ <!-- lab 9 -->
 
+ <!--
+Name of feature: 1. Refactor: Modularize the back-end codebase.
+
+Estimate of time needed to complete: _ min___
+
+Start time: __2:03___
+
+Finish time: __3:10___
+
+Actual time needed to complete: __ min___
+
+Name of feature: 
+
+Estimate of time needed to complete: __ min___
+
+Start time: ____
+
+Finish time: ____
+
+Actual time needed to complete: _____
  -->
