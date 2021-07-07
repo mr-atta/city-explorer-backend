@@ -6,6 +6,8 @@ class Moves {
   constructor(mData) {
     this.title = mData.title;
     this.vote_average = mData.vote_average;
+    this.poster_path = `https://image.tmdb.org/t/p/w500${mData.poster_path}`;
+    this.overview = mData.overview;
   }
 }
 
@@ -22,7 +24,7 @@ movesFile.getHandelMove = function (req, res) {
         return new Moves(newData);
       });
       //
-      // console.log(MovesOfData.data.results);
+      console.log(mov);
       res.send(mov);
     })
     .catch((error) => {
