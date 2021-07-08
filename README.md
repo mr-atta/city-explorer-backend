@@ -98,3 +98,15 @@ Finish time: __4:10__
 
 Actual time needed to complete: __40 min___
  -->
+<!-- lab 10 -->
+ <!--
+Name of feature: 1. Refactor: Modularize the back-end codebase.
+
+Estimate of time needed to complete: _80 min___
+
+Start time: __11:47___
+
+Finish time: _____
+
+Actual time needed to complete: __ min___
+ -->
