@@ -11,25 +11,34 @@ class Moves {
   }
 }
 
+let inMemoryM = {};
+
 movesFile.getHandelMove = function (req, res) {
   let searchQuery = req.query.searchQuery;
   // https://api.themoviedb.org/3/search/movie?api_key=fae5c20d4567826cc3af88cd810b6916&query=Amman
   let url2 = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVES_KEY}&query=${searchQuery}`;
 
-  axios
-    .get(url2)
-    .then((MovesOfData) => {
-      // .data or .data.data
-      let mov = MovesOfData.data.results.map((newData) => {
-        return new Moves(newData);
+  if (inMemoryM[searchQuery] != undefined) {
+    console.log("got the data from server (inMemoryM)");
+    res.send(inMemoryM[searchQuery]);
+  } else {
+    axios
+      .get(url2)
+      .then((MovesOfData) => {
+        // .data or .data.data
+        let mov = MovesOfData.data.results.map((newData) => {
+          return new Moves(newData);
+        });
+        //
+        console.log("got the data from API (Move API)");
+        // console.log(mov);
+        inMemoryM[searchQuery] = mov;
+        res.send(mov);
+      })
+      .catch((error) => {
+        res.status(500).send("error ... from backend req to API moves");
       });
-      //
-      console.log(mov);
-      res.send(mov);
-    })
-    .catch((error) => {
-      res.status(500).send("error ... from backend req to API moves");
-    });
+  }
 };
 
 module.exports = movesFile;
