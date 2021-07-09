@@ -16,7 +16,7 @@ weatherFile.getHandelWeather = function (req, res) {
   let searchQuery = req.query.searchQuery;
 
   // https://api.weatherbit.io/v2.0/forecast/daily?city=Amman&key=e17ed097653a4865b6e6c782cc77c8ac
-  let url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${searchQuery}&key=${process.env.WEATHER_KEY}`;
+  let url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${searchQuery}&key=${process.env.WEATHER_KEY}&days=4`;
 
   axios
     .get(url)
